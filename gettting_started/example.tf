@@ -20,10 +20,10 @@ resource "aws_instance" "example" {
   depends_on = [aws_s3_bucket.example]
 }
 
-resource "aws_instance" "another" {
-  ami           = "ami-b374d5a5"
-  instance_type = "t2.micro"
-}
+#resource "aws_instance" "another" {
+#  ami           = "ami-b374d5a5"
+#  instance_type = "t2.micro"
+#}
 
 resource "aws_eip" "ip" {
   instance = aws_instance.example.id
